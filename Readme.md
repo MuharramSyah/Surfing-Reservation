@@ -33,8 +33,8 @@ This project implements a landing page with a form and connects it to a Laravel 
 project/
 ├── frontend/  # Next.js frontend application
 │   ├── components/  # Reusable components
-│   ├── pages/  # Application pages
-│   ├── styles/  # Global and component styles
+│   ├── app/  # Application pages
+│   ├── lib/  # Global and component styles
 │   └── ...  # Other Next.js files
 ├── backend/  # Laravel backend application
 │   ├── app/  # Laravel application core
