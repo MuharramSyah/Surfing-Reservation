@@ -1,0 +1,271 @@
+{
+	"info": {
+		"_postman_id": "f962b2ae-f2a0-459e-860f-3b0c7193fdb9",
+		"name": "PalmCode",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26837287",
+		"_collection_link": "https://devesriindonesia.postman.co/workspace/My-Workspace~207798d7-fd14-4256-83bd-61f1bb0b935a/collection/26837287-f962b2ae-f2a0-459e-860f-3b0c7193fdb9?action=share&source=collection_link&creator=26837287"
+	},
+	"item": [
+		{
+			"name": "NextJS API",
+			"item": [
+				{
+					"name": "Store Book",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Store Booking",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Yolanthe Lindenboim",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "ylindenboim0@samsung.com",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "+861155479807",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "China",
+							"type": "text"
+						},
+						{
+							"key": "visit_date",
+							"value": "12/4/2023",
+							"type": "text"
+						},
+						{
+							"key": "board",
+							"value": "Fishboard",
+							"type": "text"
+						},
+						{
+							"key": "attachment",
+							"type": "file",
+							"src": "/Users/muharramsyah/Downloads/1*KXxj_GFYy9CwAOG-zkGf8g.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/visitors",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"visitors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Booking Detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/visitors/1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"visitors",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Visitor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Muharram",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "ylindenboim0@samsung.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "phone",
+							"value": "+861155479807",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "country",
+							"value": "China",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "rating",
+							"value": "2",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "visit_date",
+							"value": "2023-04-14",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "board",
+							"value": "Fishboard",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "attachment",
+							"type": "file",
+							"src": "/Users/muharramsyah/Downloads/IMG_5829.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/visitors/2?_method=PUT",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"visitors",
+						"2"
+					],
+					"query": [
+						{
+							"key": "_method",
+							"value": "PUT"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Visitors",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzE1NTI5MjAyLCJleHAiOjE3MTU1MzI4MDIsIm5iZiI6MTcxNTUyOTIwMiwianRpIjoiY01XeDRnQmFEME9KRVBxNiIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.41Td5ZEtX_UnTe2lQgj3TsfV2bdg_e6R7EA9qC5lW9Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/visitors",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"visitors"
+					],
+					"query": [
+						{
+							"key": "search[name]",
+							"value": "Muharram",
+							"disabled": true
+						},
+						{
+							"key": "search[email]",
+							"value": "muharram",
+							"disabled": true
+						},
+						{
+							"key": "sort",
+							"value": "-visit_date",
+							"description": "\"-\" means its Descending",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "3",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "3",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sign In",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://localhost:8000",
+			"type": "string"
+		}
+	]
+}
