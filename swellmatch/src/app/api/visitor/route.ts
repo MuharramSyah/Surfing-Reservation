@@ -7,9 +7,18 @@ export async function GET(request: NextRequest) {
 export async function POST(request: NextRequest) {
     const data = await request.formData()
 
+    const res_token = await fetch(`${process.env.REST_ENDPOINT}/api/login`)
+    const res_json = await res_token.json()
+
+    if(res_token.status !== 200)
+        return NextResponse.json({status: 500, message: "Internal Server Error"})
+
     const response = await fetch(`${process.env.REST_ENDPOINT}/api/visitors`, {
         method: "POST",
         body: data,
+        headers: {
+            "Authorization": `Bearer ${res_json.data.accessToken}`
+        }
     });
     console.log(response)
 

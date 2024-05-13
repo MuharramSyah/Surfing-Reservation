@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\VisitorController;
+use \App\Http\Controllers\AuthController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -18,5 +19,8 @@ use \App\Http\Controllers\VisitorController;
 //    return $request->user();
 //});
 
-Route::apiResource('visitors', VisitorController::class);
-Route::get('/attachment/{cacheKey}', [VisitorController::class, 'getAttachment']);
+Route::post('/login', [AuthController::class, 'login']);
+Route::apiResource('/visitors', VisitorController::class)->middleware('auth.api');
+Route::get('/attachment/{cacheKey}', [VisitorController::class, 'getAttachment'])->middleware('auth.api');
+
+

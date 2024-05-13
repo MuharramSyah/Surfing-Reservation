@@ -7,7 +7,6 @@ use App\Models\Board;
 use App\Models\Country;
 use App\Traits\ResponseTrait;
 use App\Models\Visitor;
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
