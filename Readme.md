@@ -34,7 +34,7 @@ project/
 ├── frontend/  # Next.js frontend application
 │   ├── components/  # Reusable components
 │   ├── app/  # Application pages
-│   ├── lib/  # Global and component styles
+│   ├── lib/  # helper functions
 │   └── ...  # Other Next.js files
 ├── backend/  # Laravel backend application
 │   ├── app/  # Laravel application core
